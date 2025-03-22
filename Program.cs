@@ -16,7 +16,6 @@ class Program
     {
         while (true)
         {
-            Console.WriteLine("Menu:");
             Console.WriteLine("1. Fahrenheit to Celsius");
             Console.WriteLine("2. Celsius to Fahrenheit");
             Console.WriteLine("0. Exit");
