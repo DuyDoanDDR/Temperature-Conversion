@@ -2,13 +2,11 @@
 
 class Program
 {
-    // Hàm chuyển từ độ C sang độ F
     public static double CelsiusToFahrenheit(double celsius)
     {
         return (celsius * 9 / 5) + 32;
     }
 
-    // Hàm chuyển từ độ F sang độ C
     public static double FahrenheitToCelsius(double fahrenheit)
     {
         return (5.0 / 9) * (fahrenheit - 32);
@@ -24,7 +22,7 @@ class Program
             Console.WriteLine("0. Exit");
             Console.Write("Enter your choice: ");
 
-            // Nhận lựa chọn từ người dùng
+            
             if (!int.TryParse(Console.ReadLine(), out int choice))
             {
                 Console.WriteLine("Invalid input! Please enter a number.");
@@ -37,7 +35,7 @@ class Program
                     Console.Write("Enter temperature in Fahrenheit: ");
                     if (double.TryParse(Console.ReadLine(), out double fTemp))
                     {
-                        Console.WriteLine($"Result: {FahrenheitToCelsius(fTemp)} °C");
+                        Console.WriteLine("Temperature in Celcius: " + FahrenheitToCelsius(fTemp) + " °C");
                     }
                     else
                     {
@@ -49,7 +47,7 @@ class Program
                     Console.Write("Enter temperature in Celsius: ");
                     if (double.TryParse(Console.ReadLine(), out double cTemp))
                     {
-                        Console.WriteLine($"Result: {CelsiusToFahrenheit(cTemp)} °F");
+                        Console.WriteLine("Temperature in Fahrenheit: " + CelsiusToFahrenheit(cTemp) + " °F");
                     }
                     else
                     {
@@ -58,7 +56,7 @@ class Program
                     break;
 
                 case 0:
-                    Console.WriteLine("Exiting the program...");
+                    Environment.Exit(0);
                     return;
 
                 default:
