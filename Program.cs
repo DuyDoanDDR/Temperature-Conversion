@@ -12,7 +12,7 @@ class Program
         return (5.0 / 9) * (fahrenheit - 32);
     }
 
-    static void Main()
+    public static void Main()
     {
         while (true)
         {
